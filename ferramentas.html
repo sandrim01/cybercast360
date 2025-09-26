@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas de Cibersegurança - CyberCast360</title>
+    <meta name="description" content="Descubra as melhores ferramentas de cibersegurança, hacking ético e análise de segurança. Recomendações do CyberCast360.">
+    <meta name="keywords" content="ferramentas, cibersegurança, hacking ético, pentesting, análise de segurança">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <i class="fas fa-podcast"></i> CyberCast360
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="episodes.html">Episódios</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="ferramentas.html" class="active">Ferramentas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-tools"></i> Ferramentas de Cibersegurança</h1>
+            <p>Descubra as melhores ferramentas para profissionais de segurança digital e entusiastas</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 0;">
+        <!-- Tool Categories Filter -->
+        <div class="tool-categories" style="margin-bottom: 3rem;">
+            <h2 style="margin-bottom: 1rem;">Categorias</h2>
+            <div class="category-filters">
+                <button class="filter-tag active" onclick="filterTools('all')">Todas</button>
+                <button class="filter-tag" onclick="filterTools('pentesting')">Penetration Testing</button>
+                <button class="filter-tag" onclick="filterTools('analise')">Análise de Rede</button>
+                <button class="filter-tag" onclick="filterTools('forense')">Forense Digital</button>
+                <button class="filter-tag" onclick="filterTools('scanner')">Scanners</button>
+                <button class="filter-tag" onclick="filterTools('criptografia')">Criptografia</button>
+                <button class="filter-tag" onclick="filterTools('monitoramento')">Monitoramento</button>
+            </div>
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid" id="toolsContainer">
+            <!-- Pentesting Tools -->
+            <div class="tool-card" data-category="pentesting">
+                <div class="tool-icon">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">Metasploit Framework</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Pentesting</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Framework completo para desenvolvimento e execução de exploits. Inclui payloads, encoders, e uma vasta biblioteca de módulos para testes de penetração.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Exploits automatizados</span>
+                        <span><i class="fas fa-check"></i> Interface gráfica e CLI</span>
+                        <span><i class="fas fa-check"></i> Community e Pro versions</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://metasploit.com" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('Metasploit Framework')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-card" data-category="pentesting">
+                <div class="tool-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">Burp Suite</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type freemium">Freemium</span>
+                        <span class="tool-category">Pentesting</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Plataforma integrada para teste de segurança de aplicações web. Proxy, scanner, intruder, repeater e muito mais em uma ferramenta.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Web Application Testing</span>
+                        <span><i class="fas fa-check"></i> Proxy HTTP/HTTPS</span>
+                        <span><i class="fas fa-check"></i> Automated Scanning</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://portswigger.net/burp" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('Burp Suite')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Tools -->
+            <div class="tool-card" data-category="analise">
+                <div class="tool-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">Wireshark</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Análise</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>O analisador de protocolos de rede mais usado no mundo. Captura e analisa tráfego de rede em tempo real com interface gráfica intuitiva.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Capture ao vivo</span>
+                        <span><i class="fas fa-check"></i> 1000+ protocolos</span>
+                        <span><i class="fas fa-check"></i> Filtros avançados</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://www.wireshark.org" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('Wireshark')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scanner Tools -->
+            <div class="tool-card" data-category="scanner">
+                <div class="tool-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">Nmap</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Scanner</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Ferramenta de descoberta de rede e scanner de portas. Essencial para mapeamento de infraestrutura e identificação de serviços.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Port Scanning</span>
+                        <span><i class="fas fa-check"></i> OS Detection</span>
+                        <span><i class="fas fa-check"></i> NSE Scripts</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://nmap.org" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('Nmap')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-card" data-category="scanner">
+                <div class="tool-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">OpenVAS</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Scanner</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Scanner de vulnerabilidades open source. Realiza testes automatizados e gera relatórios detalhados de segurança.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> 50,000+ vulnerability tests</span>
+                        <span><i class="fas fa-check"></i> Web interface</span>
+                        <span><i class="fas fa-check"></i> Relatórios detalhados</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://www.openvas.org" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('OpenVAS')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forensic Tools -->
+            <div class="tool-card" data-category="forense">
+                <div class="tool-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">Autopsy</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Forense</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Plataforma de análise forense digital com interface gráfica. Analisa discos, recupera arquivos deletados e gera relatórios forenses.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Análise de timeline</span>
+                        <span><i class="fas fa-check"></i> Recuperação de arquivos</span>
+                        <span><i class="fas fa-check"></i> Análise de registros</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://www.autopsy.com" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('Autopsy')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monitoring Tools -->
+            <div class="tool-card" data-category="monitoramento">
+                <div class="tool-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">OSSEC</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Monitoramento</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Sistema de detecção de intrusão baseado em host (HIDS). Monitora logs, detecta rootkits, realiza verificação de integridade.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Log analysis</span>
+                        <span><i class="fas fa-check"></i> File integrity checking</span>
+                        <span><i class="fas fa-check"></i> Rootkit detection</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://www.ossec.net" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('OSSEC')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cryptography Tools -->
+            <div class="tool-card" data-category="criptografia">
+                <div class="tool-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="tool-content">
+                    <h3 class="tool-title">GnuPG</h3>
+                    <div class="tool-meta">
+                        <span class="tool-type free">Gratuita</span>
+                        <span class="tool-category">Criptografia</span>
+                    </div>
+                    <div class="tool-description">
+                        <p>Implementação completa do padrão OpenPGP. Criptografia e assinatura digital de arquivos e e-mails com chaves públicas.</p>
+                    </div>
+                    <div class="tool-features">
+                        <span><i class="fas fa-check"></i> Criptografia híbrida</span>
+                        <span><i class="fas fa-check"></i> Assinatura digital</span>
+                        <span><i class="fas fa-check"></i> Gerenciamento de chaves</span>
+                    </div>
+                    <div class="tool-actions">
+                        <a href="https://gnupg.org" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Visitar Site
+                        </a>
+                        <button onclick="saveToolBookmark('GnuPG')" class="btn btn-outline">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bookmarked Tools Section -->
+        <div id="bookmarkedSection" class="bookmarked-tools" style="margin-top: 4rem; display: none;">
+            <h2><i class="fas fa-bookmark"></i> Ferramentas Salvas</h2>
+            <div id="bookmarkedList" class="bookmarked-list">
+                <!-- Bookmarked tools will be displayed here -->
+            </div>
+            <button onclick="clearBookmarks()" class="btn btn-outline">
+                <i class="fas fa-trash"></i> Limpar Lista
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>CyberCast360</h3>
+                    <p>Seu podcast de cibersegurança e tecnologia</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/cybercast360" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@cybercast360" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/cybercast360" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2025 CyberCast360. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Tool filtering functionality
+        function filterTools(category) {
+            const tools = document.querySelectorAll('.tool-card');
+            const filterTags = document.querySelectorAll('.filter-tag');
+            
+            // Update active filter tag
+            filterTags.forEach(tag => tag.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter tools
+            tools.forEach(tool => {
+                if (category === 'all' || tool.dataset.category === category) {
+                    tool.style.display = 'block';
+                } else {
+                    tool.style.display = 'none';
+                }
+            });
+        }
+
+        // Bookmark functionality
+        let bookmarkedTools = JSON.parse(localStorage.getItem('bookmarkedTools')) || [];
+
+        function saveToolBookmark(toolName) {
+            if (!bookmarkedTools.includes(toolName)) {
+                bookmarkedTools.push(toolName);
+                localStorage.setItem('bookmarkedTools', JSON.stringify(bookmarkedTools));
+                updateBookmarkedDisplay();
+                
+                // Visual feedback
+                event.target.innerHTML = '<i class="fas fa-check"></i> Salvo';
+                event.target.style.background = '#28a745';
+                setTimeout(() => {
+                    event.target.innerHTML = '<i class="fas fa-bookmark"></i>';
+                    event.target.style.background = '';
+                }, 2000);
+            } else {
+                alert('Esta ferramenta já está na sua lista!');
+            }
+        }
+
+        function updateBookmarkedDisplay() {
+            const bookmarkedSection = document.getElementById('bookmarkedSection');
+            const bookmarkedList = document.getElementById('bookmarkedList');
+            
+            if (bookmarkedTools.length > 0) {
+                bookmarkedSection.style.display = 'block';
+                bookmarkedList.innerHTML = bookmarkedTools.map(tool => 
+                    `<div class="bookmarked-item">
+                        <span><i class="fas fa-bookmark"></i> ${tool}</span>
+                        <button onclick="removeBookmark('${tool}')" class="remove-bookmark">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>`
+                ).join('');
+            } else {
+                bookmarkedSection.style.display = 'none';
+            }
+        }
+
+        function removeBookmark(toolName) {
+            bookmarkedTools = bookmarkedTools.filter(tool => tool !== toolName);
+            localStorage.setItem('bookmarkedTools', JSON.stringify(bookmarkedTools));
+            updateBookmarkedDisplay();
+        }
+
+        function clearBookmarks() {
+            if (confirm('Tem certeza que deseja limpar todas as ferramentas salvas?')) {
+                bookmarkedTools = [];
+                localStorage.removeItem('bookmarkedTools');
+                updateBookmarkedDisplay();
+            }
+        }
+
+        // Initialize bookmarked display on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateBookmarkedDisplay();
+        });
+    </script>
+</body>
+</html>

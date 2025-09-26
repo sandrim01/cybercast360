@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCast360 - Seu podcast de cibersegurança e tecnologia</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="CyberCast360 - Seu podcast de cibersegurança e tecnologia. Episódios, artigos, ferramentas e muito mais sobre segurança da informação.">
+    <meta name="keywords" content="cybersecurity, podcast, cibersegurança, tecnologia, hacking ético, segurança">
+    <meta name="author" content="CyberCast360">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="CyberCast360 - Seu podcast de cibersegurança">
+    <meta property="og:description" content="Episódios, artigos e ferramentas sobre cibersegurança e tecnologia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firebrick-pony-144038.hostingersite.com/">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="assets/images/logo.png" alt="CyberCast360 Logo" class="logo">
+                    <span class="brand-text">CyberCast360</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="episodes.html">Episódios</a></li>
+                    <li><a href="artigos.html">Artigos</a></li>
+                    <li><a href="ferramentas.html">Ferramentas</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="admin.html" class="admin-link" title="Área Administrativa">
+                        <i class="fas fa-user-shield"></i>
+                        <span class="admin-text">ADMIN</span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">CYBER</span>CAST360
+                </h1>
+                <p class="hero-subtitle">
+                    Seu podcast de cibersegurança e tecnologia
+                </p>
+                <div class="hero-description">
+                    <p>Descubra o mundo da segurança digital com episódios exclusivos, artigos especializados e as melhores ferramentas do mercado.</p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="episodes.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Últimos Episódios
+                    </a>
+                    <a href="#newsletter" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Newsletter
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Status API -->
+        <div class="api-status" id="api-status">
+            <div class="container">
+                <div class="status-info">
+                    <i class="fas fa-circle-notch fa-spin"></i> 
+                    Conectando com API...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Últimos Episódios -->
+    <section class="episodes-preview">
+        <div class="container">
+            <h2 class="section-title">Últimos Episódios</h2>
+            <div id="episodes-container" class="episodes-grid">
+                <!-- Conteúdo carregado via API -->
+            </div>
+            <div class="section-footer">
+                <a href="episodes.html" class="btn btn-secondary">
+                    <i class="fas fa-headphones"></i> Ver Todos os Episódios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Últimos Artigos -->
+    <section class="articles-preview">
+        <div class="container">
+            <h2 class="section-title">Últimos Artigos</h2>
+            <div id="posts-container" class="articles-grid">
+                <!-- Conteúdo carregado via API -->
+            </div>
+            <div class="section-footer">
+                <a href="artigos.html" class="btn btn-secondary">
+                    <i class="fas fa-newspaper"></i> Ver Todos os Artigos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ferramentas em Destaque -->
+    <section class="tools-preview">
+        <div class="container">
+            <h2 class="section-title">Ferramentas em Destaque</h2>
+            <div id="tools-container" class="tools-grid">
+                <!-- Conteúdo carregado via API -->
+            </div>
+            <div class="section-footer">
+                <a href="ferramentas.html" class="btn btn-secondary">
+                    <i class="fas fa-wrench"></i> Ver Todas as Ferramentas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Newsletter CyberCast360</h2>
+            <p class="newsletter-description">
+                Receba as últimas novidades sobre cibersegurança, episódios exclusivos e ferramentas diretamente no seu e-mail.
+            </p>
+            <form id="newsletter-form" class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+                    <input type="text" name="nome" placeholder="Seu nome (opcional)">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Inscrever-se
+                    </button>
+                </div>
+                <p class="newsletter-privacy">
+                    <i class="fas fa-lock"></i> Seus dados são seguros. Sem spam, apenas conteúdo relevante.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>CyberCast360</h3>
+                    <p>Seu podcast de cibersegurança e tecnologia</p>
+                    <div class="api-info">
+                        <small id="api-info">API: Conectando...</small>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/cybercast360" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@cybercast360" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/cybercast360" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2025 CyberCast360. Todos os direitos reservados.
+                <a href="admin.html" style="color: rgba(255,255,255,0.3); text-decoration: none; font-size: 0.8em; margin-left: 1rem;" title="Área Administrativa">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Inicialização específica da página -->
+    <script>
+        // Verificar status da API
+        async function checkAPIStatus() {
+            try {
+                const status = await api.healthCheck();
+                document.getElementById('api-status').innerHTML = `
+                    <div class="container">
+                        <div class="status-info success">
+                            <i class="fas fa-check-circle"></i> 
+                            API Online - ${status.service}
+                        </div>
+                    </div>
+                `;
+                document.getElementById('api-info').textContent = `API: ${status.service} - Online`;
+            } catch (error) {
+                document.getElementById('api-status').innerHTML = `
+                    <div class="container">
+                        <div class="status-info error">
+                            <i class="fas fa-exclamation-triangle"></i> 
+                            API Offline - Usando dados estáticos
+                        </div>
+                    </div>
+                `;
+                document.getElementById('api-info').textContent = 'API: Offline';
+                
+                // Carregar dados estáticos como fallback
+                loadStaticData();
+            }
+        }
+
+        // Carregar dados estáticos se API estiver offline
+        function loadStaticData() {
+            // Posts estáticos
+            const staticPosts = [
+                {
+                    titulo: "Como Criar Senhas Verdadeiramente Seguras em 2025",
+                    slug: "senhas-seguras-2025",
+                    resumo: "Guia completo com as melhores práticas atualizadas para criação de senhas seguras...",
+                    categoria: "Segurança Digital",
+                    data_criacao: "2025-09-22T00:00:00Z"
+                },
+                {
+                    titulo: "Bug Bounty: Como Começar na Caça às Vulnerabilidades",
+                    slug: "bug-bounty-iniciantes",
+                    resumo: "Tudo o que você precisa saber para começar sua jornada nos programas de bug bounty...",
+                    categoria: "Hacking Ético",
+                    data_criacao: "2025-09-18T00:00:00Z"
+                }
+            ];
+            renderPosts(staticPosts, 'posts-container');
+
+            // Episódios estáticos
+            const staticEpisodes = [
+                {
+                    titulo: "Zero Trust: O Futuro da Segurança Corporativa",
+                    slug: "zero-trust-futuro-seguranca",
+                    descricao: "Exploramos o modelo Zero Trust e como ele está revolucionando a segurança das empresas...",
+                    numero_episodio: 42,
+                    temporada: 2,
+                    duracao: "45 min",
+                    data_criacao: "2025-09-25T00:00:00Z"
+                },
+                {
+                    titulo: "Ransomware: Análise de Casos Reais",
+                    slug: "ransomware-casos-reais",
+                    descricao: "Estudamos casos reais de ransomware e as lições aprendidas para prevenção...",
+                    numero_episodio: 41,
+                    temporada: 2,
+                    duracao: "52 min",
+                    data_criacao: "2025-09-23T00:00:00Z"
+                }
+            ];
+            renderEpisodes(staticEpisodes, 'episodes-container');
+
+            // Ferramentas estáticas
+            const staticTools = [
+                {
+                    nome: "Nmap",
+                    slug: "nmap",
+                    descricao: "Scanner de rede e auditoria de segurança",
+                    categoria: "Scanner de Rede",
+                    preco: "gratuito",
+                    nivel: "intermediario"
+                },
+                {
+                    nome: "Burp Suite",
+                    slug: "burp-suite",
+                    descricao: "Plataforma integrada para testes de segurança web",
+                    categoria: "Teste de Aplicações",
+                    preco: "freemium",
+                    nivel: "avancado"
+                }
+            ];
+            renderTools(staticTools, 'tools-container');
+        }
+
+        // Inicializar página
+        document.addEventListener('DOMContentLoaded', function() {
+            checkAPIStatus();
+            
+            // Inicializar formulário de newsletter
+            const newsletterForm = document.getElementById('newsletter-form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    const email = formData.get('email');
+                    const nome = formData.get('nome');
+                    
+                    const success = await handleNewsletterForm(email, nome);
+                    if (success) {
+                        this.reset();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

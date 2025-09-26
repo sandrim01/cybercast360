@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Acessar o Sistema Administrativo - CyberCast360</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .access-guide {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 4rem;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        
+        .access-method {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 5px solid #2c5aa0;
+            text-align: left;
+        }
+        
+        .access-method h3 {
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .access-method p {
+            margin: 0;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #2c5aa0;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .credentials {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border: 2px dashed #2c5aa0;
+        }
+        
+        .credentials strong {
+            color: #1565c0;
+        }
+        
+        .note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="access-guide">
+        <div class="icon">
+            <i class="fas fa-user-shield"></i>
+        </div>
+        
+        <h1>🔐 Sistema Administrativo CyberCast360</h1>
+        
+        <p>Existem <strong>3 maneiras</strong> de acessar o painel administrativo:</p>
+        
+        <div class="access-method">
+            <h3><i class="fas fa-mouse-pointer"></i> 1. Ícone no Cabeçalho</h3>
+            <p>Procure pelo ícone do escudo (<i class="fas fa-user-shield"></i>) no menu de navegação do site.</p>
+        </div>
+        
+        <div class="access-method">
+            <h3><i class="fas fa-cog"></i> 2. Ícone no Rodapé</h3>
+            <p>No final de cada página, há um pequeno ícone de configuração (<i class="fas fa-cog"></i>) ao lado dos direitos autorais.</p>
+        </div>
+        
+        <div class="access-method">
+            <h3><i class="fas fa-link"></i> 3. URL Direta</h3>
+            <p>Acesse diretamente através do endereço: <strong>admin/login.php</strong></p>
+        </div>
+        
+        <div class="credentials">
+            <h3><i class="fas fa-key"></i> Credenciais Padrão</h3>
+            <p><strong>Email:</strong> admin@cybercast360.com</p>
+            <p><strong>Senha:</strong> Admin123!</p>
+        </div>
+        
+        <div class="note">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Importante:</strong> Para acessar o sistema, você precisa ter o PHP instalado e o servidor rodando. 
+            Execute: <code>php -S localhost:8080</code> na pasta do projeto.
+        </div>
+        
+        <a href="admin/login.php" class="btn">
+            <i class="fas fa-sign-in-alt"></i> Acessar Sistema Administrativo
+        </a>
+        
+        <a href="index.php" class="btn" style="background: #6c757d;">
+            <i class="fas fa-home"></i> Voltar ao Site
+        </a>
+    </div>
+</body>
+</html>

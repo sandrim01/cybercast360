@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Ícone Admin - CyberCast360</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .test-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 2rem 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .admin-test {
+            background: rgba(255,215,0,0.3);
+            border: 3px solid #ffd700;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            margin: 1rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .icon-showcase {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .icon-item {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 150px;
+        }
+        
+        .icon-item i {
+            font-size: 3rem;
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>🔍 Teste do Ícone Admin</h1>
+        <p>Se você conseguir ver os ícones abaixo, o Font Awesome está carregando</p>
+        
+        <div style="margin: 2rem 0;">
+            <a href="admin/login.php" class="admin-test" title="ADMIN - Deve estar pulsando">
+                <i class="fas fa-user-shield"></i>
+            </a>
+        </div>
+        
+        <p style="font-size: 1.2rem; margin: 1rem 0;">
+            ☝️ O ícone acima deve estar <strong>PULSANDO</strong> com borda dourada
+        </p>
+    </div>
+
+    <div class="container" style="padding: 3rem 0; background: #f8f9fa;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Teste de Todos os Ícones</h2>
+        
+        <div class="icon-showcase">
+            <div class="icon-item">
+                <i class="fas fa-user-shield"></i>
+                <p><strong>Admin Shield</strong></p>
+                <p>fas fa-user-shield</p>
+            </div>
+            
+            <div class="icon-item">
+                <i class="fas fa-cog"></i>
+                <p><strong>Settings</strong></p>
+                <p>fas fa-cog</p>
+            </div>
+            
+            <div class="icon-item">
+                <i class="fas fa-podcast"></i>
+                <p><strong>Podcast</strong></p>
+                <p>fas fa-podcast</p>
+            </div>
+            
+            <div class="icon-item">
+                <i class="fas fa-lock"></i>
+                <p><strong>Lock</strong></p>
+                <p>fas fa-lock</p>
+            </div>
+            
+            <div class="icon-item">
+                <i class="fas fa-key"></i>
+                <p><strong>Key</strong></p>
+                <p>fas fa-key</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; background: white; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+            <h3>🎯 Onde encontrar o ícone admin no site:</h3>
+            <ol style="text-align: left; max-width: 500px; margin: 0 auto; line-height: 2;">
+                <li><strong>Cabeçalho (index.php):</strong> Último item do menu - ícone de escudo</li>
+                <li><strong>Cabeçalho (index.html):</strong> Último item do menu - ícone de escudo</li>
+                <li><strong>Rodapé:</strong> Pequeno ícone de engrenagem ao lado dos direitos autorais</li>
+                <li><strong>URL Direta:</strong> <code>admin/login.php</code></li>
+            </ol>
+        </div>
+        
+        <div style="text-align: center;">
+            <h3>🔗 Links Diretos de Teste:</h3>
+            <p>
+                <a href="index.html" style="margin: 0.5rem; padding: 1rem 2rem; background: #2c5aa0; color: white; text-decoration: none; border-radius: 10px;">
+                    Ver index.html
+                </a>
+                <a href="index.php" style="margin: 0.5rem; padding: 1rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 10px;">
+                    Ver index.php
+                </a>
+                <a href="admin/login.php" style="margin: 0.5rem; padding: 1rem 2rem; background: #dc3545; color: white; text-decoration: none; border-radius: 10px;">
+                    Admin Direto
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Verificar se Font Awesome carregou
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const testIcon = document.createElement('i');
+                testIcon.className = 'fas fa-user-shield';
+                testIcon.style.position = 'absolute';
+                testIcon.style.left = '-9999px';
+                document.body.appendChild(testIcon);
+                
+                const computed = window.getComputedStyle(testIcon, ':before');
+                const content = computed.content;
+                
+                if (!content || content === 'none' || content === '""') {
+                    alert('⚠️ Font Awesome NÃO carregou! Isso explica por que o ícone não aparece.');
+                } else {
+                    console.log('✅ Font Awesome carregado com sucesso!');
+                }
+                
+                document.body.removeChild(testIcon);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

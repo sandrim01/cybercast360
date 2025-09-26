@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCast360 - Teste de Ícone Admin</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Destacar o ícone para teste */
+        .admin-link-test {
+            opacity: 1 !important;
+            background: rgba(255, 255, 255, 0.2) !important;
+            border: 2px solid #ffd700 !important;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.php" class="logo">
+                <i class="fas fa-podcast"></i> CyberCast360
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.php" class="active">Início</a></li>
+                <li><a href="episodes.php">Episódios</a></li>
+                <li><a href="categorias.php">Categorias</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
+                <li><a href="sobre.php">Sobre</a></li>
+                <li><a href="contato.php">Contato</a></li>
+                <li><a href="admin-access.html" class="admin-link admin-link-test" title="Área Administrativa">
+                    <i class="fas fa-user-shield"></i>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo de teste -->
+    <section style="padding: 4rem 0; text-align: center; background: white;">
+        <div class="container">
+            <h1>🔍 Teste do Ícone Admin</h1>
+            <p>O ícone do admin deve aparecer destacado no cabeçalho (com borda dourada e animação).</p>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                <h3>Variações do Ícone:</h3>
+                <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; margin: 1rem 0;">
+                    <span style="font-size: 2rem; color: #2c5aa0;">
+                        <i class="fas fa-user-shield"></i>
+                    </span>
+                    <span style="font-size: 2rem; color: #2c5aa0;">
+                        <i class="fas fa-cog"></i>
+                    </span>
+                    <span style="font-size: 2rem; color: #2c5aa0;">
+                        <i class="fas fa-key"></i>
+                    </span>
+                    <span style="font-size: 2rem; color: #2c5aa0;">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+                <p>Se você não consegue ver os ícones acima, pode ser um problema com o Font Awesome.</p>
+            </div>
+            
+            <div style="background: #e3f2fd; padding: 2rem; border-radius: 15px;">
+                <h3>🎯 Onde encontrar o ícone admin:</h3>
+                <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                    <li><strong>Cabeçalho:</strong> Último item do menu (com animação dourada)</li>
+                    <li><strong>Rodapé:</strong> Pequeno ícone de engrenagem nos direitos autorais</li>
+                    <li><strong>URL Direta:</strong> admin/login.php</li>
+                </ul>
+            </div>
+            
+            <a href="admin-access.html" style="display: inline-block; margin: 2rem; padding: 1rem 2rem; background: #2c5aa0; color: white; text-decoration: none; border-radius: 10px;">
+                🔐 Guia de Acesso Administrativo
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer simples -->
+    <footer style="background: #333; color: white; text-align: center; padding: 2rem;">
+        <p>&copy; 2024 CyberCast360. Todos os direitos reservados. 
+            <a href="admin-access.html" style="color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8em; margin-left: 1rem;" title="Área Administrativa">
+                <i class="fas fa-cog"></i>
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

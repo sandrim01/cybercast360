@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções de Acesso Admin - CyberCast360</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .solution-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c5aa0;
+        }
+        
+        .solution-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: #2c5aa0;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .troubleshoot {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        .troubleshoot h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .troubleshoot ol {
+            text-align: left;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 Soluções de Acesso Admin</h1>
+            <p>Múltiplas formas de acessar o sistema administrativo</p>
+        </div>
+        
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <div class="icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Demonstração HTML</h3>
+                <p>Versão que funciona sem servidor PHP. Mostra a interface e valida credenciais localmente.</p>
+                <a href="admin/login-demo.html" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Testar Agora
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Login PHP Completo</h3>
+                <p>Versão completa com banco de dados. Requer servidor PHP rodando.</p>
+                <a href="admin/login.php" class="btn btn-success">
+                    <i class="fas fa-php"></i> Login PHP
+                </a>
+                <br>
+                <small style="color: #666;">Requer: php -S localhost:8080</small>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Teste de Ícones</h3>
+                <p>Verifica se os ícones estão carregando corretamente e diagnostica problemas.</p>
+                <a href="teste-icone-admin.html" class="btn btn-info">
+                    <i class="fas fa-search"></i> Diagnosticar
+                </a>
+            </div>
+        </div>
+        
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <div class="icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Página Principal</h3>
+                <p>Voltar à página inicial do site (com ícone admin no menu).</p>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="fas fa-home"></i> Index HTML
+                </a>
+                <a href="index.php" class="btn btn-success">
+                    <i class="fas fa-home"></i> Index PHP
+                </a>
+            </div>
+            
+            <div class="solution-card">
+                <div class="icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Credenciais</h3>
+                <p><strong>Email:</strong> admin@cybercast360.com<br>
+                   <strong>Senha:</strong> Admin123!</p>
+                <button onclick="copyCredentials()" class="btn btn-info">
+                    <i class="fas fa-copy"></i> Copiar
+                </button>
+            </div>
+        </div>
+        
+        <div class="troubleshoot">
+            <h3><i class="fas fa-question-circle"></i> Se o link não funcionar:</h3>
+            <ol>
+                <li><strong>Teste a demonstração HTML</strong> - Clique em "Testar Agora" acima</li>
+                <li><strong>Verifique se tem PHP instalado</strong> - Digite "php -v" no terminal</li>
+                <li><strong>Inicie o servidor PHP</strong> - Execute "php -S localhost:8080"</li>
+                <li><strong>Acesse via localhost</strong> - Use localhost:8080 em vez de arquivo local</li>
+                <li><strong>Limpe o cache</strong> - Pressione Ctrl+F5 no navegador</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        function copyCredentials() {
+            const text = 'Email: admin@cybercast360.com\nSenha: Admin123!';
+            navigator.clipboard.writeText(text).then(function() {
+                alert('✅ Credenciais copiadas para a área de transferência!');
+            }).catch(function() {
+                alert('📋 Credenciais:\nEmail: admin@cybercast360.com\nSenha: Admin123!');
+            });
+        }
+        
+        // Detectar tipo de acesso
+        if (window.location.protocol === 'file:') {
+            console.log('📁 Acessando via arquivo local - apenas HTML funcionará');
+        } else {
+            console.log('🌐 Acessando via servidor - PHP disponível');
+        }
+    </script>
+</body>
+</html>

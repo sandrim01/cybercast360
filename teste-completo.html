@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCast360 - Diagnóstico de Ícones</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        .diagnostic {
+            background: white;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .icon-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .icon-test {
+            font-size: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            color: #2c5aa0;
+            text-align: center;
+            min-width: 60px;
+        }
+        
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+        .warning { color: #ffc107; }
+        
+        .admin-demo {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+        
+        .nav-demo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        
+        .nav-links-demo {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        
+        .nav-links-demo a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        
+        .admin-link-demo {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid #ffd700;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 5px #ffd700; }
+            to { box-shadow: 0 0 20px #ffd700; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com ícone admin destacado -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <i class="fas fa-podcast"></i> CyberCast360
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="episodes.html">Episódios</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="ferramentas.html">Ferramentas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li>
+                    <a href="admin-access.html" class="admin-link" title="Área Administrativa" 
+                       style="background: rgba(255,215,0,0.3); border: 2px solid #ffd700; animation: pulse 2s infinite;">
+                        <i class="fas fa-user-shield"></i>
+                        <span class="admin-text">ADMIN</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="diagnostic">
+        <h1>🔍 Diagnóstico de Ícones Admin</h1>
+        
+        <div id="fontawesome-status">
+            <h3>Status do Font Awesome:</h3>
+            <p id="fa-result">Verificando...</p>
+        </div>
+        
+        <h3>Teste de Ícones:</h3>
+        <div class="icon-row">
+            <div class="icon-test">
+                <i class="fas fa-user-shield"></i>
+                <br><small>Shield</small>
+            </div>
+            <div class="icon-test">
+                <i class="fas fa-cog"></i>
+                <br><small>Cog</small>
+            </div>
+            <div class="icon-test">
+                <i class="fas fa-podcast"></i>
+                <br><small>Podcast</small>
+            </div>
+            <div class="icon-test">
+                <i class="fas fa-user"></i>
+                <br><small>User</small>
+            </div>
+        </div>
+        
+        <h3>Navegação de Demonstração:</h3>
+        <div class="admin-demo">
+            <div class="nav-demo">
+                <span style="font-weight: bold;">
+                    <i class="fas fa-podcast"></i> CyberCast360
+                </span>
+                <ul class="nav-links-demo">
+                    <li><a href="#">Menu 1</a></li>
+                    <li><a href="#">Menu 2</a></li>
+                    <li>
+                        <a href="admin-access.html" class="admin-link-demo" title="Admin">
+                            <i class="fas fa-user-shield"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="background: #e8f4fd; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+            <h3>✅ O que deve funcionar:</h3>
+            <ul>
+                <li>Ícone admin no cabeçalho (último item do menu)</li>
+                <li>Destaque dourado com animação</li>
+                <li>Hover effect com escala</li>
+                <li>Texto "ADMIN" como fallback</li>
+            </ul>
+        </div>
+        
+        <div style="background: #fff3cd; padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+            <h3>⚠️ Se não estiver funcionando:</h3>
+            <ol>
+                <li>Verifique se o Font Awesome carregou (veja o status acima)</li>
+                <li>Tente atualizar o cache do navegador (Ctrl+F5)</li>
+                <li>Verifique se não há adblocker bloqueando CDNs</li>
+                <li>Teste em outro navegador</li>
+            </ol>
+        </div>
+        
+        <h3>Links de Acesso:</h3>
+        <div style="text-align: center;">
+            <a href="admin-access.html" style="display: inline-block; margin: 0.5rem; padding: 1rem 2rem; background: #2c5aa0; color: white; text-decoration: none; border-radius: 10px;">
+                📋 Guia Completo de Acesso
+            </a>
+            <a href="debug-icon.html" style="display: inline-block; margin: 0.5rem; padding: 1rem 2rem; background: #17a2b8; color: white; text-decoration: none; border-radius: 10px;">
+                🔧 Teste Avançado
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Verificar se Font Awesome carregou
+        window.addEventListener('load', function() {
+            const testElement = document.createElement('i');
+            testElement.className = 'fas fa-home';
+            testElement.style.position = 'absolute';
+            testElement.style.left = '-9999px';
+            document.body.appendChild(testElement);
+            
+            const result = document.getElementById('fa-result');
+            
+            setTimeout(function() {
+                const computedStyle = window.getComputedStyle(testElement, ':before');
+                const content = computedStyle.getPropertyValue('content');
+                
+                if (content && content !== 'none' && content !== '') {
+                    result.innerHTML = '<span class="success">✅ Font Awesome carregado com sucesso!</span>';
+                } else {
+                    result.innerHTML = '<span class="error">❌ Font Awesome não foi carregado. Verifique sua conexão com a internet.</span>';
+                }
+                
+                document.body.removeChild(testElement);
+            }, 1000);
+        });
+        
+        // Destacar clique no admin
+        document.addEventListener('DOMContentLoaded', function() {
+            const adminLinks = document.querySelectorAll('.admin-link, .admin-link-demo');
+            adminLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('🎯 Ícone Admin clicado! Redirecionaria para: admin/login.php');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episódios - CyberCast360</title>
+    <meta name="description" content="Todos os episódios do CyberCast360. Podcast de cibersegurança, hacking ético e tecnologia.">
+    <meta name="keywords" content="episódios, podcast, cibersegurança, hacking ético, tecnologia">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <i class="fas fa-podcast"></i> CyberCast360
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="episodes.html" class="active">Episódios</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="ferramentas.html">Ferramentas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-podcast"></i> Todos os Episódios</h1>
+            <p>Explore nossa biblioteca completa de episódios sobre cibersegurança e tecnologia</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 0;">
+        <!-- Episode Search and Filter -->
+        <div class="search-filter-section" style="margin-bottom: 3rem;">
+            <div class="search-box" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <input type="text" id="episodeSearch" placeholder="Buscar episódios..." 
+                       style="flex: 1; padding: 1rem; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--border-radius); background: rgba(255,255,255,0.1); color: var(--text-color);">
+                <button onclick="searchEpisodes()" class="btn btn-primary">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </div>
+            <div class="filter-tags" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="filter-tag active" onclick="filterEpisodes('all')">Todos</button>
+                <button class="filter-tag" onclick="filterEpisodes('ciberseguranca')">Cibersegurança</button>
+                <button class="filter-tag" onclick="filterEpisodes('hacking')">Hacking Ético</button>
+                <button class="filter-tag" onclick="filterEpisodes('tecnologia')">Tecnologia</button>
+                <button class="filter-tag" onclick="filterEpisodes('entrevista')">Entrevistas</button>
+            </div>
+        </div>
+
+        <!-- Episodes Grid -->
+        <div class="episodes-grid" id="episodesContainer">
+            <!-- Episode 025 -->
+            <article class="episode-card" data-category="ciberseguranca">
+                <div class="episode-number">#025</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Inteligência Artificial na Cibersegurança</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 20/09/2025</span>
+                            <span><i class="fas fa-clock"></i> 52min</span>
+                            <span class="episode-category">Cibersegurança</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Exploramos como a IA está revolucionando a detecção de ameaças, os novos ataques baseados em machine learning e como as empresas podem usar IA para fortalecer suas defesas.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber025" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('025', 'Inteligência Artificial na Cibersegurança')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 024 -->
+            <article class="episode-card" data-category="ciberseguranca">
+                <div class="episode-number">#024</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Zero Trust: O Futuro da Segurança</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 15/09/2025</span>
+                            <span><i class="fas fa-clock"></i> 48min</span>
+                            <span class="episode-category">Cibersegurança</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Discussão profunda sobre arquitetura Zero Trust, implementação prática em ambientes corporativos e cases de sucesso de grandes empresas.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber024" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('024', 'Zero Trust: O Futuro da Segurança')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 023 -->
+            <article class="episode-card" data-category="ciberseguranca">
+                <div class="episode-number">#023</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Ransomware: Proteção e Recuperação</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 10/09/2025</span>
+                            <span><i class="fas fa-clock"></i> 45min</span>
+                            <span class="episode-category">Cibersegurança</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Análise dos últimos ataques de ransomware, estratégias de prevenção, planos de recuperação e como negociar com atacantes (ou não!).</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber023" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('023', 'Ransomware: Proteção e Recuperação')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 022 -->
+            <article class="episode-card" data-category="hacking">
+                <div class="episode-number">#022</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Bug Bounty: Caçando Vulnerabilidades</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 05/09/2025</span>
+                            <span><i class="fas fa-clock"></i> 55min</span>
+                            <span class="episode-category">Hacking Ético</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Entrevista com hunters profissionais, melhores plataformas, como começar, ferramentas essenciais e cases de bugs que renderam milhares de dólares.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber022" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('022', 'Bug Bounty: Caçando Vulnerabilidades')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 021 -->
+            <article class="episode-card" data-category="tecnologia">
+                <div class="episode-number">#021</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Computação Quântica vs Criptografia</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 01/09/2025</span>
+                            <span><i class="fas fa-clock"></i> 43min</span>
+                            <span class="episode-category">Tecnologia</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Como a computação quântica vai quebrar a criptografia atual, cronograma esperado e as novas tecnologias criptográficas pós-quânticas.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber021" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('021', 'Computação Quântica vs Criptografia')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 020 -->
+            <article class="episode-card" data-category="entrevista">
+                <div class="episode-number">#020</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Entrevista: CISO de Multinacional</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 25/08/2025</span>
+                            <span><i class="fas fa-clock"></i> 62min</span>
+                            <span class="episode-category">Entrevista</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Conversa exclusiva com o CISO de uma das maiores empresas do Brasil sobre desafios, carreira, gestão de crises e o futuro da cibersegurança.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber020" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('020', 'Entrevista: CISO de Multinacional')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 019 -->
+            <article class="episode-card" data-category="hacking">
+                <div class="episode-number">#019</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Red Team vs Blue Team</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 20/08/2025</span>
+                            <span><i class="fas fa-clock"></i> 47min</span>
+                            <span class="episode-category">Hacking Ético</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Exploramos as diferenças entre Red Team e Blue Team, como funcionam os exercícios de simulação de ataques e defesas em tempo real.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber019" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('019', 'Red Team vs Blue Team')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Episode 018 -->
+            <article class="episode-card" data-category="tecnologia">
+                <div class="episode-number">#018</div>
+                <div class="episode-content">
+                    <div class="episode-header">
+                        <h3 class="episode-title">Blockchain e Segurança Digital</h3>
+                        <div class="episode-meta">
+                            <span><i class="fas fa-calendar"></i> 15/08/2025</span>
+                            <span><i class="fas fa-clock"></i> 41min</span>
+                            <span class="episode-category">Tecnologia</span>
+                        </div>
+                    </div>
+                    <div class="episode-description">
+                        <p>Como blockchain pode melhorar a segurança digital, casos de uso práticos, vulnerabilidades da tecnologia e o futuro das criptomoedas.</p>
+                    </div>
+                    <div class="episode-actions">
+                        <a href="https://open.spotify.com/episode/cyber018" target="_blank" class="btn btn-primary">
+                            <i class="fab fa-spotify"></i> Ouvir no Spotify
+                        </a>
+                        <button onclick="shareEpisode('018', 'Blockchain e Segurança Digital')" class="btn btn-outline">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <button id="loadMoreBtn" onclick="loadMoreEpisodes()" class="btn btn-secondary">
+                <i class="fas fa-plus"></i> Carregar Mais Episódios
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>CyberCast360</h3>
+                    <p>Seu podcast de cibersegurança e tecnologia</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/cybercast360" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@cybercast360" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/cybercast360" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2025 CyberCast360. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Episode filtering functionality
+        function filterEpisodes(category) {
+            const episodes = document.querySelectorAll('.episode-card');
+            const filterTags = document.querySelectorAll('.filter-tag');
+            
+            // Update active filter tag
+            filterTags.forEach(tag => tag.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter episodes
+            episodes.forEach(episode => {
+                if (category === 'all' || episode.dataset.category === category) {
+                    episode.style.display = 'flex';
+                } else {
+                    episode.style.display = 'none';
+                }
+            });
+        }
+
+        // Episode search functionality
+        function searchEpisodes() {
+            const searchTerm = document.getElementById('episodeSearch').value.toLowerCase();
+            const episodes = document.querySelectorAll('.episode-card');
+            
+            episodes.forEach(episode => {
+                const title = episode.querySelector('.episode-title').textContent.toLowerCase();
+                const description = episode.querySelector('.episode-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    episode.style.display = 'flex';
+                } else {
+                    episode.style.display = 'none';
+                }
+            });
+        }
+
+        // Share episode functionality
+        function shareEpisode(episodeNumber, title) {
+            if (navigator.share) {
+                navigator.share({
+                    title: `${title} - CyberCast360`,
+                    text: `Confira este episódio do CyberCast360: ${title}`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support native sharing
+                const shareText = `Confira este episódio do CyberCast360: ${title} - ${window.location.href}`;
+                navigator.clipboard.writeText(shareText);
+                alert('Link copiado para o clipboard!');
+            }
+        }
+
+        // Load more episodes (placeholder functionality)
+        let loadedPages = 1;
+        function loadMoreEpisodes() {
+            // This would typically load more episodes from a server
+            // For now, just show a message
+            loadedPages++;
+            if (loadedPages > 3) {
+                document.getElementById('loadMoreBtn').innerHTML = '<i class="fas fa-check"></i> Todos os episódios carregados';
+                document.getElementById('loadMoreBtn').disabled = true;
+            } else {
+                alert(`Carregando mais episódios... (Página ${loadedPages})`);
+            }
+        }
+
+        // Search on Enter key
+        document.getElementById('episodeSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchEpisodes();
+            }
+        });
+    </script>
+</body>
+</html>

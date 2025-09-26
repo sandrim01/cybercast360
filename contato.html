@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - CyberCast360</title>
+    <meta name="description" content="Entre em contato com o CyberCast360. Envie suas sugestões, críticas ou propostas de colaboração.">
+    <meta name="keywords" content="contato, cybercast360, sugestões, feedback, colaboração">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container nav">
+            <a href="index.html" class="logo">
+                <i class="fas fa-podcast"></i> CyberCast360
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="episodes.html">Episódios</a></li>
+                <li><a href="categorias.html">Categorias</a></li>
+                <li><a href="ferramentas.html">Ferramentas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-envelope"></i> Entre em Contato</h1>
+            <p>Queremos ouvir você! Envie suas sugestões, dúvidas ou propostas de colaboração</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 0;">
+        <div class="grid grid-2" style="gap: 4rem; align-items: start;">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2 style="margin-bottom: 2rem; color: var(--text-color);">Envie sua Mensagem</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject" name="subject">
+                            <option value="">Selecione um assunto</option>
+                            <option value="sugestao-episodio">Sugestão de Episódio</option>
+                            <option value="parceria">Proposta de Parceria</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="colaboracao">Colaboração</option>
+                            <option value="imprensa">Imprensa</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Conte-nos sobre sua ideia, sugestão ou como podemos ajudar..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Quero receber novidades sobre novos episódios e conteúdos exclusivos
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
+                </form>
+                
+                <div id="form-status" class="form-status hidden"></div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 style="margin-bottom: 2rem; color: var(--text-color);">Outras Formas de Contato</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>E-mail</h3>
+                            <p>contato@cybercast360.com</p>
+                            <p>Para parcerias: parceria@cybercast360.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>WhatsApp</h3>
+                            <p>+55 (11) 99999-9999</p>
+                            <p>Segunda a sexta, 9h às 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>Instagram</h3>
+                            <p>@cybercast360</p>
+                            <p>Direct ou comentários nos posts</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="method-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="method-info">
+                            <h3>LinkedIn</h3>
+                            <p>/company/cybercast360</p>
+                            <p>Para oportunidades profissionais</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Section -->
+                <div class="faq-section" style="margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-color);">Perguntas Frequentes</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Como posso sugerir um tema para episódio?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Use o formulário acima selecionando "Sugestão de Episódio" ou nos envie uma mensagem direta no Instagram. Adoramos receber ideias da nossa comunidade!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Vocês fazem parcerias com empresas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Estamos abertos a parcerias que agreguem valor à nossa audiência. Entre em contato através do e-mail parceria@cybercast360.com com sua proposta.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Como posso participar como convidado?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Procuramos especialistas em cibersegurança para participar como convidados. Envie seu currículo e área de especialização através do formulário ou e-mail.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Quanto tempo demora para responder?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Respondemos todas as mensagens em até 48 horas úteis. Para urgências, use nosso WhatsApp durante o horário comercial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Social Media -->
+        <section class="social-section" style="margin-top: 4rem; text-align: center;">
+            <h2 style="margin-bottom: 2rem; color: var(--text-color);">Siga-nos nas Redes Sociais</h2>
+            <div class="social-grid">
+                <a href="https://instagram.com/cybercast360" target="_blank" class="social-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>Stories e bastidores</p>
+                </a>
+                <a href="https://youtube.com/@cybercast360" target="_blank" class="social-card">
+                    <i class="fab fa-youtube"></i>
+                    <h3>YouTube</h3>
+                    <p>Episódios em vídeo</p>
+                </a>
+                <a href="https://linkedin.com/company/cybercast360" target="_blank" class="social-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Conteúdo profissional</p>
+                </a>
+                <a href="https://open.spotify.com/show/cybercast360" target="_blank" class="social-card">
+                    <i class="fab fa-spotify"></i>
+                    <h3>Spotify</h3>
+                    <p>Ouça nossos episódios</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>CyberCast360</h3>
+                    <p>Seu podcast de cibersegurança e tecnologia</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/cybercast360" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@cybercast360" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://open.spotify.com/show/cybercast360" target="_blank">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                </div>
+            </div>
+            <p>&copy; 2025 CyberCast360. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

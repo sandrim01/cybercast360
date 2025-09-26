@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚂 Migração Railway - CyberCast360</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        .btn-success { background: #28a745; }
+        .btn-success:hover { background: #1e7e34; }
+        .steps {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚂 Migração CyberCast360 → Railway MySQL</h1>
+        <p>Execute a migração completa do banco de dados</p>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Status da Configuração</h2>
+        <ul>
+            <li>✅ <strong>Railway MySQL:</strong> gondola.proxy.rlwy.net:17965</li>
+            <li>✅ <strong>Config.php:</strong> Atualizado para Railway</li>
+            <li>✅ <strong>Database.sql:</strong> Adaptado para Railway</li>
+            <li>⏳ <strong>Migração:</strong> Pronto para executar</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🚀 Execute a Migração</h2>
+        <p>Clique no botão abaixo para executar a migração completa:</p>
+        
+        <div style="text-align: center;">
+            <a href="migrate-railway.php" class="btn btn-success">
+                🚂 EXECUTAR MIGRAÇÃO RAILWAY
+            </a>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Importante:</strong> A migração pode levar alguns minutos. Não feche esta janela durante o processo.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📋 O que a Migração Fará</h2>
+        <div class="steps">
+            <ol>
+                <li><strong>Conectar ao Railway MySQL</strong></li>
+                <li><strong>Executar database.sql completo</strong></li>
+                <li><strong>Criar 14 tabelas principais:</strong>
+                    <ul>
+                        <li>usuarios, sessoes, categorias, posts</li>
+                        <li>episodes, ferramentas, tags, post_tags</li>
+                        <li>newsletter, campanhas_newsletter, contatos</li>
+                        <li>comentarios, configuracoes, logs</li>
+                    </ul>
+                </li>
+                <li><strong>Inserir dados iniciais</strong> (usuário admin, configurações)</li>
+                <li><strong>Criar índices e relacionamentos</strong></li>
+                <li><strong>Verificar integridade</strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🔧 Testes Pós-Migração</h2>
+        <p>Após a migração, teste estas funcionalidades:</p>
+        
+        <a href="test-railway.php" class="btn">🧪 Testar Conexão Railway</a>
+        <a href="index.php" class="btn">🏠 Página Principal</a>
+        <a href="admin/login.php" class="btn">🔐 Admin Login</a>
+    </div>
+
+    <div class="card">
+        <h2>🔑 Credenciais de Teste</h2>
+        <p><strong>Admin padrão criado pela migração:</strong></p>
+        <ul>
+            <li><strong>Email:</strong> admin@cybercast360.com</li>
+            <li><strong>Senha:</strong> admin123!@#</li>
+        </ul>
+        <div class="warning">
+            <strong>🔒 Altere esta senha após o primeiro login!</strong>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⚡ Links Rápidos</h2>
+        <a href="GUIA_RAILWAY.md" class="btn">📖 Guia Railway</a>
+        <a href="CONFIGURACAO_HOSTINGER.md" class="btn">📋 Config Hostinger</a>
+        <a href="ERRO_500_SOLUCAO.md" class="btn">🔧 Solução Erro 500</a>
+    </div>
+
+    <script>
+        // Adicionar confirmação para migração
+        document.querySelector('a[href="migrate-railway.php"]').addEventListener('click', function(e) {
+            if (!confirm('🚂 Deseja executar a migração completa para Railway MySQL?\n\nIsso criará toda a estrutura do banco de dados.')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
