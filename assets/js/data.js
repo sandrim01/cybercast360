@@ -34,21 +34,53 @@ class DataManager {
             const defaultEpisodes = [
                 {
                     id: 1,
-                    title: "Episódio #001 - Introdução à Cibersegurança",
-                    description: "Neste primeiro episódio, falamos sobre os conceitos básicos de cibersegurança.",
-                    duration: "25:30",
+                    title: "CyberCast 360 – Episódio 1: Introdução à Segurança da Informação",
+                    description: "Neste primeiro episódio, apresentamos os fundamentos da segurança da informação e sua importância na vida digital. Discutimos os três pilares fundamentais (Confidencialidade, Integridade e Disponibilidade) e compartilhamos dicas práticas sobre senhas fortes e autenticação de dois fatores.",
+                    duration: "35:42",
                     date: new Date().toISOString(),
                     audioUrl: "#",
-                    category: "Introdução"
-                },
-                {
-                    id: 2,
-                    title: "Episódio #002 - Ataques mais comuns",
-                    description: "Discutimos os principais tipos de ataques cibernéticos e como se proteger.",
-                    duration: "32:15",
-                    date: new Date().toISOString(),
-                    audioUrl: "#",
-                    category: "Segurança"
+                    category: "Introdução",
+                    content: `
+                        <h3>🎧 CyberCast 360 – Episódio 1: Introdução à Segurança da Informação</h3>
+                        
+                        <h4>📰 Notícias Rápidas</h4>
+                        <ul>
+                            <li><strong>26/09/2025 - Reuters:</strong> A rede de creches Kido, no Reino Unido, sofreu um ataque de ransomware que vazou dados de 8.000 crianças.</li>
+                            <li><strong>22/09/2025 - Reuters/ENISA:</strong> A Collins Aerospace foi alvo de ransomware que afetou sistemas de aeroportos europeus, causando atrasos em voos.</li>
+                            <li><strong>23/09/2025 - GDPR Register:</strong> O site do Ministério da Saúde do Brasil expôs dados de milhões de cidadãos por falhas de credenciais de acesso.</li>
+                        </ul>
+                        <p><em>Essas notícias mostram que a cibersegurança impacta tanto empresas globais quanto órgãos públicos e usuários comuns.</em></p>
+                        
+                        <h4>🛡️ Tema Central: O que é Segurança da Informação?</h4>
+                        <p>A segurança da informação vai muito além de antivírus. É a proteção de dados pessoais, prevenção de ataques e boas práticas de uso da tecnologia.</p>
+                        
+                        <h5>Os Três Pilares Fundamentais:</h5>
+                        <ul>
+                            <li><strong>Confidencialidade:</strong> Manter informações acessíveis apenas a pessoas autorizadas (ex: dados bancários)</li>
+                            <li><strong>Integridade:</strong> Garantir que as informações não sejam alteradas indevidamente (ex: postagens em redes sociais)</li>
+                            <li><strong>Disponibilidade:</strong> Assegurar que os dados estejam acessíveis quando necessário (ex: aplicativos funcionando 24/7)</li>
+                        </ul>
+                        
+                        <p>Lembre-se: segurança não é apenas tecnologia, mas também pessoas, processos e cultura digital. <strong>O usuário é muitas vezes o elo mais fraco da cadeia.</strong></p>
+                        
+                        <h4>💡 Dica Prática: Senhas Fortes</h4>
+                        <ul>
+                            <li>Use senhas com <strong>12+ caracteres</strong></li>
+                            <li>Combine letras maiúsculas, minúsculas, números e símbolos</li>
+                            <li>Utilize <strong>gerenciadores de senhas</strong></li>
+                            <li>Ative a <strong>autenticação de dois fatores (2FA)</strong> sempre que possível</li>
+                        </ul>
+                        
+                        <h4>🎯 Encerramento</h4>
+                        <p>A segurança da informação é a base para confiança, privacidade e proteção na era digital.</p>
+                        
+                        <p><strong>📱 Nos acompanhe:</strong></p>
+                        <ul>
+                            <li>Instagram: @cybercast360</li>
+                            <li>Blog: cybercast360.com.br</li>
+                            <li>Compartilhe este episódio!</li>
+                        </ul>
+                    `
                 }
             ];
             localStorage.setItem('cybercast_episodes', JSON.stringify(defaultEpisodes));
